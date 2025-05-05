@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 46ba9be6c4545f148aeea969a1f0bc1b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207911
+  packageName: Amplify Animation Pack
+  packageVersion: 1.0.1 000
+  assetPath: Assets/AmplifyAnimationPack/Materials/Characters/DemoCharacter/Ellen_Body_Mat.mat
+  uploadId: 474509

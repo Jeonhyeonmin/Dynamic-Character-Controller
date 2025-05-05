@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 06cf86c2d3192ba4094ca69da5a279cc
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207911
+  packageName: Amplify Animation Pack
+  packageVersion: 1.0.1 000
+  assetPath: Assets/AmplifyAnimationPack/Prefabs/Interactables/Weapons/BowAndArrow/BA_Bow.prefab
+  uploadId: 474509

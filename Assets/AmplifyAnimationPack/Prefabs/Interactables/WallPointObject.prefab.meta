@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 73b28fffc34c2e24592183bc184f1946
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207911
+  packageName: Amplify Animation Pack
+  packageVersion: 1.0.1 000
+  assetPath: Assets/AmplifyAnimationPack/Prefabs/Interactables/WallPointObject.prefab
+  uploadId: 474509

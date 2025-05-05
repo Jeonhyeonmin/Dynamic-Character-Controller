@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ac6970da5d12e4f4faeaf00cb37cdd53
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207911
+  packageName: Amplify Animation Pack
+  packageVersion: 1.0.1 000
+  assetPath: Assets/AmplifyAnimationPack/Prefabs/Character/CharacterCameraManager.prefab
+  uploadId: 474509

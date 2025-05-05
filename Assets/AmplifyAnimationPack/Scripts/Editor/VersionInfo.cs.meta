@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 37b57fc21f2c0ba4db4904ad16b359ae
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207911
+  packageName: Amplify Animation Pack
+  packageVersion: 1.0.1 000
+  assetPath: Assets/AmplifyAnimationPack/Scripts/Editor/VersionInfo.cs
+  uploadId: 474509

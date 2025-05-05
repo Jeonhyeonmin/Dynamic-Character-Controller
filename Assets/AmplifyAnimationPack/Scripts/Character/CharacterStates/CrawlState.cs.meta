@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 027ee00f571cd46488e4ef360ff4cd8f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207911
+  packageName: Amplify Animation Pack
+  packageVersion: 1.0.1 000
+  assetPath: Assets/AmplifyAnimationPack/Scripts/Character/CharacterStates/CrawlState.cs
+  uploadId: 474509

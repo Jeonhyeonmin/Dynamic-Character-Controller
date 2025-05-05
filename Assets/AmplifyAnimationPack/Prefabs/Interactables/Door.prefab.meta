@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 99e20be834c117e479c298a1e18af08b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207911
+  packageName: Amplify Animation Pack
+  packageVersion: 1.0.1 000
+  assetPath: Assets/AmplifyAnimationPack/Prefabs/Interactables/Door.prefab
+  uploadId: 474509

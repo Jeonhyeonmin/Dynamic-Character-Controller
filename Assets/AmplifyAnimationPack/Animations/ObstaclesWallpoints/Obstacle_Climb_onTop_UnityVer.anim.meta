@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bdf2e1c8a4af0274bad9d120d49e900a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207911
+  packageName: Amplify Animation Pack
+  packageVersion: 1.0.1 000
+  assetPath: Assets/AmplifyAnimationPack/Animations/ObstaclesWallpoints/Obstacle_Climb_onTop_UnityVer.anim
+  uploadId: 474509

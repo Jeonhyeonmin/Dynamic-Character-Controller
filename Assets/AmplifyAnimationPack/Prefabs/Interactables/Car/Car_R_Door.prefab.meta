@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 71fe1f586625251449e9d50cfe69b62b
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207911
+  packageName: Amplify Animation Pack
+  packageVersion: 1.0.1 000
+  assetPath: Assets/AmplifyAnimationPack/Prefabs/Interactables/Car/Car_R_Door.prefab
+  uploadId: 474509

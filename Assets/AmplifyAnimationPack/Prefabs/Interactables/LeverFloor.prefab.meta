@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7a518139f2c9c6142a90ece3be3c16dd
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207911
+  packageName: Amplify Animation Pack
+  packageVersion: 1.0.1 000
+  assetPath: Assets/AmplifyAnimationPack/Prefabs/Interactables/LeverFloor.prefab
+  uploadId: 474509

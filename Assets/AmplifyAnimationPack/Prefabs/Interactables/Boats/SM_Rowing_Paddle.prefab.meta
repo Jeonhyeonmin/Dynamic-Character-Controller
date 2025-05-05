@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9669d0f047f4bb74da2c789d1a9ed4c5
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207911
+  packageName: Amplify Animation Pack
+  packageVersion: 1.0.1 000
+  assetPath: Assets/AmplifyAnimationPack/Prefabs/Interactables/Boats/SM_Rowing_Paddle.prefab
+  uploadId: 474509

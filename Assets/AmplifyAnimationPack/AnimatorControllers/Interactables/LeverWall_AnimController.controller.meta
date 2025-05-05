@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a2663abe4a3bffb46a5d609d821a93af
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207911
+  packageName: Amplify Animation Pack
+  packageVersion: 1.0.1 000
+  assetPath: Assets/AmplifyAnimationPack/AnimatorControllers/Interactables/LeverWall_AnimController.controller
+  uploadId: 474509

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: c4aadd1d81ed148448a499bf112f00f1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207911
+  packageName: Amplify Animation Pack
+  packageVersion: 1.0.1 000
+  assetPath: Assets/AmplifyAnimationPack/Scripts/Interactables/EnemyClass.cs
+  uploadId: 474509

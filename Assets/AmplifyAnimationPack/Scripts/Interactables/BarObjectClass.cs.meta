@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: a2003450fd0752f43b5832d0cbb02df1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207911
+  packageName: Amplify Animation Pack
+  packageVersion: 1.0.1 000
+  assetPath: Assets/AmplifyAnimationPack/Scripts/Interactables/BarObjectClass.cs
+  uploadId: 474509

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 1af3986ac76a0c441823cab0e3e746e6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207911
+  packageName: Amplify Animation Pack
+  packageVersion: 1.0.1 000
+  assetPath: Assets/AmplifyAnimationPack/Scripts/Character/CharacterStates/AttackState.cs
+  uploadId: 474509

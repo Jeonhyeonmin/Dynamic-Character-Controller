@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: dc1a423adc232bb42a87280055734de3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207911
+  packageName: Amplify Animation Pack
+  packageVersion: 1.0.1 000
+  assetPath: Assets/AmplifyAnimationPack/Materials/DemoScene/Wall_Green_9.mat
+  uploadId: 474509

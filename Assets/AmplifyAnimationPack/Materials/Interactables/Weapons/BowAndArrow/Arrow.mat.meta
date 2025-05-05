@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bbb1f9184c3b4d24498ae0939a68ca93
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207911
+  packageName: Amplify Animation Pack
+  packageVersion: 1.0.1 000
+  assetPath: Assets/AmplifyAnimationPack/Materials/Interactables/Weapons/BowAndArrow/Arrow.mat
+  uploadId: 474509

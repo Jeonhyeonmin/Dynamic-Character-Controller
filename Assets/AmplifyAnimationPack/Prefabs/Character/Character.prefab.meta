@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 97ec576c9f7732d49851c025b7d1e223
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207911
+  packageName: Amplify Animation Pack
+  packageVersion: 1.0.1 000
+  assetPath: Assets/AmplifyAnimationPack/Prefabs/Character/Character.prefab
+  uploadId: 474509

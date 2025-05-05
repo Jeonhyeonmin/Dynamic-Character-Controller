@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f3b7af555760eb64fa2c1362e56b3c3b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207911
+  packageName: Amplify Animation Pack
+  packageVersion: 1.0.1 000
+  assetPath: Assets/AmplifyAnimationPack/Materials/DemoScene/Wall_Orange_1.mat
+  uploadId: 474509

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ed80681e7f0a1cf469787ae0b703e6be
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207911
+  packageName: Amplify Animation Pack
+  packageVersion: 1.0.1 000
+  assetPath: Assets/AmplifyAnimationPack/Scenes/DemoScene_Profiles/Default Post.asset
+  uploadId: 474509

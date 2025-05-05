@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f36c6acbc8832134a9fc30b143f3a2d0
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207911
+  packageName: Amplify Animation Pack
+  packageVersion: 1.0.1 000
+  assetPath: Assets/AmplifyAnimationPack/Prefabs/Interactables/Weapons/SwordAndShield/SS_SwordAndShield.prefab
+  uploadId: 474509

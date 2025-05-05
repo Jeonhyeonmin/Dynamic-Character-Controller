@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 996dfd9d8ace72a458acb1b706901e0f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207911
+  packageName: Amplify Animation Pack
+  packageVersion: 1.0.1 000
+  assetPath: Assets/AmplifyAnimationPack/Prefabs/Interactables/ThrowableObject.prefab
+  uploadId: 474509

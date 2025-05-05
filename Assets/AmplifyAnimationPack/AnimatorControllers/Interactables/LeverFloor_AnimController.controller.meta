@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bfd457381ee8f7a40a242d0aaffcc03f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207911
+  packageName: Amplify Animation Pack
+  packageVersion: 1.0.1 000
+  assetPath: Assets/AmplifyAnimationPack/AnimatorControllers/Interactables/LeverFloor_AnimController.controller
+  uploadId: 474509

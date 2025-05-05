@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 182214bf75ca1e7469f9442f93b887a7
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207911
+  packageName: Amplify Animation Pack
+  packageVersion: 1.0.1 000
+  assetPath: Assets/AmplifyAnimationPack/Prefabs/Interactables/Obstacle.prefab
+  uploadId: 474509

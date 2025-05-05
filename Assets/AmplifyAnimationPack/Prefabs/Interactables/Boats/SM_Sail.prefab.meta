@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a31e08edc2008a444bb2a02bb6e113c8
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207911
+  packageName: Amplify Animation Pack
+  packageVersion: 1.0.1 000
+  assetPath: Assets/AmplifyAnimationPack/Prefabs/Interactables/Boats/SM_Sail.prefab
+  uploadId: 474509
