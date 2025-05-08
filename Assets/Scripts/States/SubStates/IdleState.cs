@@ -3,11 +3,15 @@ using UnityEngine;
 
 public class IdleState : State
 {
+    public override void Awake(PlayerDynamicController player)
+    {
+        base.Awake(player);
+        player.playerSubStateType = PlayerSubStateType.Idle;
+    }
+
     public override void Enter(PlayerDynamicController player)
     {
         base.Enter(player);
-
-        player.anim.SetInteger(AnimatorHash.Int.PLAYER_STATE_TYPE_HASH, player.playerSubStateType.GetHashCode());
     }
 
     public override void Update(PlayerDynamicController player)
@@ -16,7 +20,7 @@ public class IdleState : State
 
         if (InputReader.Instance.moveDirection != Vector2.zero)
         {
-            //player.subStateMachine.ChangeSubState(new WalkState(), player);
+            player.subStateMachine.ChangeSubState(new WalkState(), player);
         }
     }
 }

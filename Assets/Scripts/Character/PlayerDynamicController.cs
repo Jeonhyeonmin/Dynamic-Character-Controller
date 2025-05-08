@@ -4,35 +4,42 @@ using UnityEngine;
 
 public enum PlayerBaseStateType
 {
-    Stand,  // 0
-    Crouch, // 1
-    Crawl,  // 2
+    Stand = 0,// 0
+    Crouch = 1, // 1
+    Crawl = 2,  // 2
 }
 
-public enum PlayerStateType
+public enum PlayerSubStateType
 {
-    Idle,   // 0
-    Walk,   // 1
-    Run,    // 2
-    Jump,   // 3
-    Fall,   // 4
-    Attack, // 5
-    Hit,    // 6
-    Dead,   // 7
-    Strafe, // 8
+    Idle = 0,   // 0
+    Walk = 1,   // 1
+    Run = 2,    // 2
+    Jump = 3,   // 3
+    Fall = 4,   // 4
+    Attack = 5, // 5
+    Hit = 6,    // 6
+    Dead = 7,   // 7
+    Strafe = 8, // 8
 }
 
-public enum PlayerPreviousStateType
+public enum PlayerPreviousBaseStateType
 {
-    Idle,   // 0
-    Walk,   // 1
-    Run,    // 2
-    Jump,   // 3
-    Fall,   // 4
-    Attack, // 5
-    Hit,    // 6
-    Dead,   // 7
-    Strafe, // 8
+    Stand = 0,  // 0
+    Crouch = 1, // 1
+    Crawl = 2,  // 2
+}
+
+public enum PlayerPreviousSubStateType
+{
+    Idle = 0,   // 0
+    Walk = 1,   // 1
+    Run = 2,    // 2
+    Jump = 3,   // 3
+    Fall = 4,   // 4
+    Attack = 5, // 5
+    Hit = 6,    // 6
+    Dead = 7,   // 7
+    Strafe = 8, // 8
 }
 
 public class PlayerDynamicController : MonoBehaviour
@@ -43,8 +50,9 @@ public class PlayerDynamicController : MonoBehaviour
     public StateMachine subStateMachine = new StateMachine();
 
     public PlayerBaseStateType playerBaseStateType = PlayerBaseStateType.Stand;
-    public PlayerStateType playerSubStateType = PlayerStateType.Idle;
-    public PlayerPreviousStateType playerPreviousStateType = PlayerPreviousStateType.Idle;
+    public PlayerSubStateType playerSubStateType = PlayerSubStateType.Idle;
+    public PlayerPreviousBaseStateType playerPreviousBaseStateType = PlayerPreviousBaseStateType.Stand;
+    public PlayerPreviousSubStateType playerPreviousSubStateType = PlayerPreviousSubStateType.Idle;
 
     public Animator anim;
 
@@ -74,12 +82,18 @@ public class PlayerDynamicController : MonoBehaviour
         if (anim == null) { Debug.LogError("Animator component not found in children."); return; }
             
         playerBaseStateType = PlayerBaseStateType.Stand;
-        playerSubStateType = PlayerStateType.Idle;
-        playerPreviousStateType = PlayerPreviousStateType.Idle;
+        playerSubStateType = PlayerSubStateType.Idle;
+        playerPreviousSubStateType = PlayerPreviousSubStateType.Idle;
 
         InputReader.Instance.OnPerformJump += OnJump;
         InputReader.Instance.OnActivateRun += OnActivateRun;
         InputReader.Instance.OnDeactivateRun += OnDeactivateRun;
+    }
+
+    private void Awake()
+    {
+        baseStateMachine.AwakeBaseState(this);
+        subStateMachine.AwakeSubState(this);
     }
 
     private void Update()

@@ -24,7 +24,7 @@ public static class AnimatorHash
     public static class Int
     {
         public static readonly int PLAYER_BASE_STATE_TYPE_HASH = Animator.StringToHash("PlayerBaseStateType");
-        public static readonly int PLAYER_STATE_TYPE_HASH = Animator.StringToHash("PlayerStateType");
-        public static readonly int PLAYER_PREVIOUS_STATE_TYPE_HASH = Animator.StringToHash("PlayerPreviousStateType");
+        public static readonly int PLAYER_STATE_TYPE_HASH = Animator.StringToHash("PlayerSubStateType");
+        public static readonly int PLAYER_PREVIOUS_STATE_TYPE_HASH = Animator.StringToHash("PlayerPreviousSubStateType");
     }
 }
