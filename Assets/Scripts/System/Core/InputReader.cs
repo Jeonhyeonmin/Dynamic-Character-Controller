@@ -13,7 +13,9 @@ public class InputReader : MonoBehaviourSingleton<InputReader>, PlayerInputActio
 
     #region Input Actions
 
-    public Action OnPerformJump;
+    public Action OnPerformJump;    // 점프 액션
+    public Action OnActivateRun;    // 달리기 액션 활성화
+    public Action OnDeactivateRun;  // 달리기 액션 비활성화
 
     #endregion
 
@@ -29,7 +31,7 @@ public class InputReader : MonoBehaviourSingleton<InputReader>, PlayerInputActio
         if (context.performed)
         {
             // Trigger the jump action
-            OnPerformJump.Invoke();
+            OnPerformJump?.Invoke();
         }
     }
 
@@ -41,6 +43,18 @@ public class InputReader : MonoBehaviourSingleton<InputReader>, PlayerInputActio
     public void OnMove(InputAction.CallbackContext context)
     {
         moveDirection = context.ReadValue<Vector2>();
+    }
+
+    public void OnRun(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            OnActivateRun?.Invoke();
+        }
+        else if (context.canceled)
+        {
+            OnDeactivateRun?.Invoke();
+        }
     }
 
     #region Callbacks Register

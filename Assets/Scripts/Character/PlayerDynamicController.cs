@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using NUnit.Framework;
 using UnityEngine;
 
 public enum PlayerBaseStateType
@@ -17,6 +19,20 @@ public enum PlayerStateType
     Attack, // 5
     Hit,    // 6
     Dead,   // 7
+    Strafe, // 8
+}
+
+public enum PlayerPreviousStateType
+{
+    Idle,   // 0
+    Walk,   // 1
+    Run,    // 2
+    Jump,   // 3
+    Fall,   // 4
+    Attack, // 5
+    Hit,    // 6
+    Dead,   // 7
+    Strafe, // 8
 }
 
 public class PlayerDynamicController : MonoBehaviour
@@ -27,10 +43,16 @@ public class PlayerDynamicController : MonoBehaviour
 
     public PlayerBaseStateType playerBaseStateType = PlayerBaseStateType.Stand;
     public PlayerStateType playerStateType = PlayerStateType.Idle;
+    public PlayerPreviousStateType playerPreviousStateType = PlayerPreviousStateType.Idle;
 
     public Animator anim;
 
-    #endregion  
+    public float CurrentStateTime { get; private set; }
+
+    private Transform capsuleCollider_Group => transform.Find("Collider_Group");
+    public CapsuleCollider[] CapsuleColliders => capsuleCollider_Group.GetComponentsInChildren<CapsuleCollider>();// Stand, Crouch, Crawl CapsuleCollider ¹è¿­
+
+    #endregion
 
     private void Start()
     {
@@ -50,13 +72,21 @@ public class PlayerDynamicController : MonoBehaviour
             
         playerBaseStateType = PlayerBaseStateType.Stand;
         playerStateType = PlayerStateType.Idle;
+        playerPreviousStateType = PlayerPreviousStateType.Idle;
 
         InputReader.Instance.OnPerformJump += OnJump;
+        InputReader.Instance.OnActivateRun += OnActivateRun;
+        InputReader.Instance.OnDeactivateRun += OnDeactivateRun;
     }
 
     private void Update()
     {
         stateMachine.Update(this);
+
+        if (stateMachine?.CurrentState != null)
+        {
+            CurrentStateTime += Time.deltaTime;
+        }
     }
 
     private void FixedUpdate()
@@ -67,5 +97,15 @@ public class PlayerDynamicController : MonoBehaviour
     private void OnJump()
     {
         Debug.Log("Jump action triggered.");
+    }
+
+    private void OnActivateRun()
+    {
+        Debug.Log("Run action activated.");
+    }
+
+    private void OnDeactivateRun()
+    {
+        Debug.Log("Run action deactivated.");
     }
 }
