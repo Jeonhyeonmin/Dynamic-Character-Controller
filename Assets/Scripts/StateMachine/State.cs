@@ -5,8 +5,20 @@ public abstract class State
 {
     public virtual void Enter(PlayerDynamicController player) 
     {
-        try { Debug.Log($"<color=#77D9FA><b>상태 진입 :</color></b> <color=white>{player.stateMachine.CurrentState?.GetType().Name}</color>"); }
+        string EnterState = String.Empty;
+
+        if (player.subStateMachine.CurrentSubState == this)
+            player.anim.SetInteger(AnimatorHash.Int.PLAYER_PREVIOUS_STATE_TYPE_HASH, player.playerSubStateType.GetHashCode());
+
+        try { EnterState = $"<color=white>{(player.baseStateMachine.CurrentBaseState == this ? player.baseStateMachine.CurrentBaseState?.GetType().Name : player.subStateMachine.CurrentSubState?.GetType().Name)}</color>"; }
         catch (NullReferenceException ex) { Debug.LogError($"<color=#F48884><b>상태 진입 출력 에러 :</color></b> <color=white>{ex.Message}</color>"); }
+        finally
+        {
+            Debug.Log(player.baseStateMachine.CurrentBaseState == this
+                ? $"<color=#98FF98>베이스 상태 진입 :</color> {EnterState}"
+                : $"<color=#800080>서브 상태 진입 :</color> {EnterState}"
+            );
+        }
     }
 
     public virtual void Update(PlayerDynamicController player) { }

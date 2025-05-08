@@ -2,22 +2,48 @@ using UnityEngine;
 
 public class StateMachine
 {
-    public State CurrentState { get; private set; }
+    public State CurrentBaseState { get; private set; }
+    public State CurrentSubState { get; private set; }
 
-    public void ChangeState(State newState, PlayerDynamicController player)
+    #region Base State
+
+    public void ChangeBaseState(State newState, PlayerDynamicController player)
     {
-        CurrentState?.Exit(player);
-        CurrentState = newState;
-        CurrentState?.Enter(player);
+        CurrentBaseState?.Exit(player);
+        CurrentBaseState = newState;
+        CurrentBaseState?.Enter(player);
     }
 
-    public void Update(PlayerDynamicController player)
+    public void UpdateBaseState(PlayerDynamicController player)
     {
-        CurrentState?.Update(player);
+        CurrentBaseState?.Update(player);
     }
 
-    public void FixedUpdate(PlayerDynamicController player)
+    public void FixedUpdateBaseState(PlayerDynamicController player)
     {
-        CurrentState?.FixedUpdate(player);
+        CurrentBaseState?.FixedUpdate(player);
     }
+
+    #endregion
+
+    #region Sub State
+
+    public void ChangeSubState(State newState, PlayerDynamicController player)
+    {
+        CurrentSubState?.Exit(player);
+        CurrentSubState = newState;
+        CurrentSubState?.Enter(player);
+    }
+
+    public void UpdateSubState(PlayerDynamicController player)
+    {
+        CurrentSubState?.Update(player);
+    }
+
+    public void FixedUpdateSubState(PlayerDynamicController player)
+    {
+        CurrentSubState?.FixedUpdate(player);
+    }
+
+    #endregion
 }

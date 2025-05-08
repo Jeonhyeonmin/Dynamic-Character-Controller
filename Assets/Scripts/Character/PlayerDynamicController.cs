@@ -39,15 +39,18 @@ public class PlayerDynamicController : MonoBehaviour
 {
     #region Variables // 변수 그룹
 
-    public StateMachine stateMachine = new StateMachine();
+    public StateMachine baseStateMachine = new StateMachine();
+    public StateMachine subStateMachine = new StateMachine();
 
     public PlayerBaseStateType playerBaseStateType = PlayerBaseStateType.Stand;
-    public PlayerStateType playerStateType = PlayerStateType.Idle;
+    public PlayerStateType playerSubStateType = PlayerStateType.Idle;
     public PlayerPreviousStateType playerPreviousStateType = PlayerPreviousStateType.Idle;
 
     public Animator anim;
 
-    public float CurrentStateTime { get; private set; }
+    public float CurrentBaseStateTime { get; private set; }
+    public float CurrentSubStateTime { get; private set; }
+    
 
     private Transform capsuleCollider_Group => transform.Find("Collider_Group");
     public CapsuleCollider[] CapsuleColliders => capsuleCollider_Group.GetComponentsInChildren<CapsuleCollider>();// Stand, Crouch, Crawl CapsuleCollider 배열
@@ -61,8 +64,8 @@ public class PlayerDynamicController : MonoBehaviour
 
     private void InitSettings()
     {
-        // Initialize the state machine with the Idle state
-        stateMachine.ChangeState(new IdleState(), this);
+        baseStateMachine.ChangeBaseState(new StandState(), this);
+        subStateMachine.ChangeSubState(new IdleState(), this);
 
         // References
         anim = GetComponent<Animator>();
@@ -71,7 +74,7 @@ public class PlayerDynamicController : MonoBehaviour
         if (anim == null) { Debug.LogError("Animator component not found in children."); return; }
             
         playerBaseStateType = PlayerBaseStateType.Stand;
-        playerStateType = PlayerStateType.Idle;
+        playerSubStateType = PlayerStateType.Idle;
         playerPreviousStateType = PlayerPreviousStateType.Idle;
 
         InputReader.Instance.OnPerformJump += OnJump;
@@ -81,18 +84,21 @@ public class PlayerDynamicController : MonoBehaviour
 
     private void Update()
     {
-        stateMachine.Update(this);
+        baseStateMachine.UpdateSubState(this);
+        subStateMachine.UpdateSubState(this);
 
-        if (stateMachine?.CurrentState != null)
-        {
-            CurrentStateTime += Time.deltaTime;
-        }
+        if (baseStateMachine?.CurrentSubState != null) CurrentBaseStateTime += Time.deltaTime;
+
+        if (subStateMachine?.CurrentSubState != null) CurrentSubStateTime += Time.deltaTime;
     }
 
     private void FixedUpdate()
     {
-        stateMachine.FixedUpdate(this);
+        baseStateMachine.FixedUpdateSubState(this);
+        subStateMachine.FixedUpdateSubState(this);
     }
+
+    //protected void 
 
     private void OnJump()
     {
