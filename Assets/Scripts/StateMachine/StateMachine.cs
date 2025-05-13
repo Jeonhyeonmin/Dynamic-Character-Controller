@@ -9,24 +9,26 @@ public class StateMachine
 
     public void ChangeBaseState(State newState, PlayerDynamicController player)
     {
-        CurrentBaseState?.Exit(player);
+        if (CurrentBaseState != null)
+            CurrentBaseState.Exit(player);
         CurrentBaseState = newState;
-        CurrentBaseState?.Enter(player);
+        CurrentBaseState.Awake(player);
+        CurrentBaseState.Enter(player);
     }
 
     public void AwakeBaseState(PlayerDynamicController player)
     {
-        CurrentBaseState?.Awake(player);
+        CurrentBaseState.Awake(player);
     }
 
     public void UpdateBaseState(PlayerDynamicController player)
     {
-        CurrentBaseState?.Update(player);
+        CurrentBaseState.Update(player);
     }
 
     public void FixedUpdateBaseState(PlayerDynamicController player)
     {
-        CurrentBaseState?.FixedUpdate(player);
+        CurrentBaseState.FixedUpdate(player);
     }
 
     #endregion
@@ -35,9 +37,11 @@ public class StateMachine
 
     public void ChangeSubState(State newState, PlayerDynamicController player)
     {
-        CurrentSubState?.Exit(player);
+        if (CurrentSubState != null)
+            CurrentSubState.Exit(player);
         CurrentSubState = newState;
-        CurrentSubState?.Enter(player);
+        CurrentSubState.Awake(player);
+        CurrentSubState.Enter(player);
     }
 
     public void AwakeSubState(PlayerDynamicController player)
@@ -47,12 +51,12 @@ public class StateMachine
 
     public void UpdateSubState(PlayerDynamicController player)
     {
-        CurrentSubState?.Update(player);
+        CurrentSubState.Update(player);
     }
 
     public void FixedUpdateSubState(PlayerDynamicController player)
     {
-        CurrentSubState?.FixedUpdate(player);
+        CurrentSubState.FixedUpdate(player);
     }
 
     #endregion

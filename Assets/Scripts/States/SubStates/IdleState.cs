@@ -20,7 +20,7 @@ public class IdleState : State
 
         if (InputReader.Instance.moveDirection != Vector2.zero)
         {
-            player.subStateMachine.ChangeSubState(new WalkState(), player);
+            player.stateMachine.ChangeSubState(new WalkState(), player);
         }
     }
 }

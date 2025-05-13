@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/AmplifyAnimationPack/Scenes/DemoScene.unity
+    guid: cde3f4746f562bd47b88dcbceefce959
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: de04325da72d3984caf7e56f27e616fb, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: eb5b5484b0a58d84d9bbf56d2c83bcfe, type: 3}

@@ -11,11 +11,13 @@ public class InputReader : MonoBehaviourSingleton<InputReader>, PlayerInputActio
     public Vector2 moveDirection = Vector2.zero;
     public Vector2 lookDirection;
 
+    public bool isRunning = false; // 달리기 상태
+    public bool isCrouching = false; // 쭈그리기 상태
+    public bool isCrawling = false; // 기어가기 상태
+
     #region Input Actions
 
     public Action OnPerformJump;    // 점프 액션
-    public Action OnActivateRun;    // 달리기 액션 활성화
-    public Action OnDeactivateRun;  // 달리기 액션 비활성화
 
     #endregion
 
@@ -49,11 +51,31 @@ public class InputReader : MonoBehaviourSingleton<InputReader>, PlayerInputActio
     {
         if (context.performed)
         {
-            OnActivateRun?.Invoke();
+            isRunning = true;
         }
         else if (context.canceled)
         {
-            OnDeactivateRun?.Invoke();
+            isRunning = false;
+        }
+    }
+
+    public void OnCrouch(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            isCrouching = true;
+        }
+        else if (context.canceled)
+        {
+            isCrouching = false;
+        }
+    }
+
+    public void OnCrwel(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            isCrawling = !isCrawling;
         }
     }
 

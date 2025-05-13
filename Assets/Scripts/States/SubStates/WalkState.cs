@@ -12,4 +12,9 @@ public class WalkState : State
     {
         base.Enter(player);
     }
+
+    public override void Update(PlayerDynamicController player)
+    {
+        
+    }
 }
